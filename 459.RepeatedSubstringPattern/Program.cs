@@ -27,6 +27,11 @@ namespace ConsoleApplication
         // }
 
         // O(l)
+        // P : pattern
+        // s = PP
+        // s2 = P`PPP`
+        // true when s2 contains s
+        // false: s = P, s2=P`P`, s2 doesn't contain s
         public static bool RepeatedSubstringPattern(string str) {
             return (str + str).Substring(1, str.Length * 2 - 2).Contains(str);
         }
